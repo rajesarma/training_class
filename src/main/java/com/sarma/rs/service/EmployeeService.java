@@ -6,6 +6,7 @@ import com.sarma.rs.entity.EmployeeEntity;
 import com.sarma.rs.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -20,6 +21,7 @@ public class EmployeeService {
 
     public List<EmployeeDto> getAllEmployees() {
         List<EmployeeEntity> empList = employeeRepository.findAll();
+        List al = new ArrayList();
 
         return empList.stream()
                 .map(this::convert)

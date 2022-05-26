@@ -1,4 +1,4 @@
-package com.sarma.rs.spring_related;
+package com.sarma.rs.sample;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class QualifierDemo1 {
 
-    private calculator calculator;
+    /*private calculator calculator;
 
     public QualifierDemo1(
             calculator calculator) {
         this.calculator = calculator;
         log.info(calculator.toString());
-    }
+    }*/
 }
