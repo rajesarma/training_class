@@ -18,6 +18,9 @@ public class DataTypesDemo {
 
 
     public static void main(String[] args) {
+        StaticDemo.Customer customer = new StaticDemo.Customer();
+//        System.out.println(StaticDemo.i);
+
 //        System.out.println(" static Int " + is);
 //        System.out.println(" static Char " + cs);
 //        System.out.println(" static Boolean " + bs);

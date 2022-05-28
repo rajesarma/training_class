@@ -1,5 +1,6 @@
 package com.sarma.rs.service;
 
+import com.sarma.rs.constants.Constants;
 import com.sarma.rs.dto.EmployeeDto;
 import com.sarma.rs.dto.Response;
 import com.sarma.rs.entity.EmployeeEntity;
@@ -44,7 +45,7 @@ public class EmployeeService {
             savedEmp.setAge(employeeDto.getAge());
             savedEmp.setSalary(employeeDto.getSalary());
             employeeRepository.save(savedEmp);
-            response.setResponseText("Employee Updated");
+            response.setResponseText(Constants.EMPLOYEE_UPDATE);
         } else {
             response.setResponseText("Employee not available with the ID :: " + empId);
         }
@@ -57,7 +58,7 @@ public class EmployeeService {
 
         if (employeeOptional.isPresent()) {
             employeeRepository.delete(employeeOptional.get());
-            response.setResponseText("Employee Deleted");
+            response.setResponseText(Constants.EMPLOYEE_DELETE);
         } else {
             response.setResponseText("Employee not available with the ID :: " + empId);
         }
